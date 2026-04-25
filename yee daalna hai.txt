@@ -1,0 +1,25 @@
+pip install -r requirements.txt
+streamlit run app.py
+
+
+Generate API tests for POST /users with payload:
+{
+  "name": "John",
+  "age": 30
+}
+
+and validate with schema 
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["name", "age"],
+  "additionalProperties": false
+}
